@@ -6,7 +6,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class SearchResultPage extends PageBase {
 	
-	Action action = new Action(driver);
 
 	public SearchResultPage(WebDriver driver) {
 		super(driver);
@@ -15,12 +14,10 @@ public class SearchResultPage extends PageBase {
 	@FindBy(xpath="//*[@id=\"secCategory\"]//img")
 	WebElement productResult;
 	
-	public boolean isProductAvailable() {
-		return action.isDisplayed(driver, productResult);
+	public void ProductPage() {
+//		Dispaly(driver, productResult);
+		ClickButton(productResult);
 	}
 	
-	public ProductPage clickOnProduct() {
-		action.click(driver, productResult); 
-		return new ProductPage(driver);
-	}
+
 }

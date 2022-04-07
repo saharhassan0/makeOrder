@@ -1,62 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-03T19:55:14Z" name="Default suite" finished-at="2022-04-03T19:55:14Z" duration-ms="85">
+  <suite started-at="2022-04-07T22:34:40Z" name="Create Order On Store Front" finished-at="2022-04-07T22:35:51Z" duration-ms="70465">
     <groups>
     </groups>
-    <test started-at="2022-04-03T19:55:14Z" name="Default test" finished-at="2022-04-03T19:55:14Z" duration-ms="85">
-      <class name="tests.EndToEndTest">
-        <test-method is-config="true" signature="StartDriver()[pri:0, instance:tests.EndToEndTest@6853425f]" started-at="2022-04-03T19:54:27Z" name="StartDriver" finished-at="2022-04-03T19:55:14Z" duration-ms="46762" status="PASS">
+    <test started-at="2022-04-07T22:34:40Z" name="Test" finished-at="2022-04-07T22:35:51Z" duration-ms="70465">
+      <class name="tests.CheckOutPageTest">
+        <test-method is-config="true" signature="StartDriver()[pri:0, instance:tests.CheckOutPageTest@9573584]" started-at="2022-04-07T22:34:04Z" name="StartDriver" finished-at="2022-04-07T22:34:40Z" duration-ms="36205" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- StartDriver -->
-        <test-method signature="endToEndTest(java.lang.String, java.lang.String)[pri:0, instance:tests.EndToEndTest@6853425f]" started-at="2022-04-03T19:55:14Z" name="endToEndTest" finished-at="2022-04-03T19:55:14Z" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Cannot inject @Test annotated Method [endToEndTest] with [class java.lang.String, class java.lang.String].
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Cannot inject @Test annotated Method [endToEndTest] with [class java.lang.String, class java.lang.String].
-For more information on native dependency injection please refer to http://testng.org/doc/documentation-main.html#native-dependency-injection
-at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:407)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:356)
-at org.testng.internal.Parameters.createParameters(Parameters.java:635)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:769)
-at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:49)
-at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:37)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:924)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method signature="shippinPage(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.CheckOutPageTest@9573584]" started-at="2022-04-07T22:34:40Z" name="shippinPage" data-provider="testData" finished-at="2022-04-07T22:35:51Z" duration-ms="70404" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[01005582222]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[sahar]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[sahar.hassan@expandcart.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[63]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[1008]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[st test]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[1234]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- endToEndTest -->
-        <test-method is-config="true" signature="StopDriver()[pri:0, instance:tests.EndToEndTest@6853425f]" started-at="2022-04-03T19:55:15Z" name="StopDriver" finished-at="2022-04-03T19:55:15Z" duration-ms="327" status="PASS">
+        </test-method> <!-- shippinPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tests.CheckOutPageTest@9573584]" started-at="2022-04-07T22:35:51Z" name="teardown" finished-at="2022-04-07T22:35:51Z" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- StopDriver -->
-      </class> <!-- tests.EndToEndTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- teardown -->
+      </class> <!-- tests.CheckOutPageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Create Order On Store Front -->
 </testng-results>

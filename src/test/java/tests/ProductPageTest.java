@@ -3,21 +3,28 @@ package tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import pages.IndexPage;
+import pages.ProductPage;
+import pages.SearchResultPage;
+
 public class ProductPageTest extends TestBase{
 	
-	private pages.IndexPage index;
-	private pages.SearchResultPage searchResultPage;
-	private pages.ProductPage productPage;
+	IndexPage index;
+	SearchResultPage searchResultPage;
+	ProductPage productPage;
 	
 	
 	
 	@Test
-	public void productPageTest(String productName, String color) throws Throwable {
-		index= new pages.IndexPage(null);
-		searchResultPage=index.searchProduct(productName);
-		productPage=searchResultPage.clickOnProduct();
-		productPage.selectColor(color);
-		productPage.clickOnAddToCart();
+	public void productPageTest() throws InterruptedException {
+		index = new IndexPage(driver);
+		index.SearchResultPage("iphone");
+		Thread.sleep(5000);
+		searchResultPage = new SearchResultPage(driver);
+		searchResultPage.ProductPage();
+		Thread.sleep(8000);
+		productPage = new ProductPage(driver);
+		productPage.addProduct();
 		
 	}
 }

@@ -1,6 +1,8 @@
 package tests;
 
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -12,13 +14,10 @@ public class SeachResultTest extends TestBase{
 	SearchResultPage searchResultPage;
 	
 
-	
 	@Test
-	public void SearchResultPage(String iphone){
+	public void SearchResultPage(){
 		index = new IndexPage(driver);
-		pages.SearchResultPage searchProduct = index.searchProduct(iphone);
-//		boolean result=searchResultPage.isProductAvailable();
-//		Assert.assertTrue(result);
+		index.SearchResultPage("iphone");
 		
 	}
 

@@ -6,8 +6,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class OrderSucessPage extends PageBase {
 	
-	Action action = new Action(driver);
-
 	public OrderSucessPage(WebDriver driver) {
 		super(driver);
 	}
@@ -15,8 +13,7 @@ public class OrderSucessPage extends PageBase {
 	@FindBy(xpath="//h1[contains(text(),'Your Order Has Been Processed!')]")
 	WebElement successMsg;
 	
-	public String validateSucessMsg() {
-		action.isDisplayed(driver, successMsg);
-		return null;
+	public void validateSucessMsg() {
+		Dispaly(driver, successMsg);
 	}
 }

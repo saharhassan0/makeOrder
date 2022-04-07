@@ -6,8 +6,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class ShippingPage extends PageBase{
 	
-	Action action = new Action(driver);
-
 	public ShippingPage(WebDriver driver) 
 	{
 		super(driver);
@@ -16,16 +14,16 @@ public class ShippingPage extends PageBase{
 	@FindBy(xpath="//*[@id=\"shipping\"]//label/input")
 	WebElement flatShipping;
 	
-	@FindBy(xpath="//button/span[text()='Continue to payment']")
+	@FindBy(xpath="*//div[3]/div/div/div/div[1]/div/button")
 	WebElement paymentBtn;
 	
-	public void clickOnflatShipping() {
-		action.click(driver, flatShipping);
+	public void selectPayment() {
+		ClickButton(flatShipping);
+
 	}
 	
-	public PaymentPage clickOnPaymentBtn() {
-		action.click(driver, paymentBtn);
-		return new PaymentPage(driver);
+	public void goToPaymentPage() {
+		ClickButton(paymentBtn);
 	}
-
+	
 }
